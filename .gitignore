@@ -1,0 +1,77 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+.env
+# Output of the go coverage tool
+*.cov
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Build and output directories
+bin/
+build/
+dist/
+release/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*.bak
+*.old
+
+# Dependency directories (remove the comment if you use vendoring)
+vendor/
+
+# IDE and editor directories and files
+.vscode/
+.idea/
+*.iml
+
+# Node modules (if you use Node.js for frontend)
+node_modules/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Go specific
+*.coverprofile
+*.test
+coverage.out
+
+# Go modules
+/go.sum
+/go.work
+/go.work.sum
+
+# Editor backups
+*~
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# GitHub Actions
+# .github/
+
+# Goland
+*.iml
+.idea/
+.idea/*
+
+# Ignore test binaries
+*.test
+
+# Ignore specific binaries
+main
