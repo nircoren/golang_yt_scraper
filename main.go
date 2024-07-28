@@ -30,6 +30,7 @@ func corsMiddleware(next http.HandlerFunc) http.HandlerFunc {
 
 func getExercisesHandler(w http.ResponseWriter, r *http.Request) {
 	injuryName := r.URL.Query().Get("injury")
+	lang := r.URL.Query().Get("lang")
 	if injuryName == "" {
 		http.Error(w, "Missing injury query parameter", http.StatusBadRequest)
 		return
@@ -38,7 +39,7 @@ func getExercisesHandler(w http.ResponseWriter, r *http.Request) {
 	// Get the exercises from OpenAI
 	system := `Your role is to receive input which is a name of an injury, and give names of the most relevant exercieses for patient to do.
     max exercises number is 5.
-    return the exerciseDescription in hebrew.
+    return the exerciseDescription in language` + lang + ` 
     return exerciseName in both lang
     please return this as a json:
     {
